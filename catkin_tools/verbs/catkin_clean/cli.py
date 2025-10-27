@@ -122,9 +122,10 @@ def prepare_arguments(parser):
     add('--dependents', '--deps', action='store_true', default=False,
         help='Clean the packages which depend on the packages to be cleaned.')
     add('--orphans', action='store_true', default=False,
-        help='Remove products from packages are no longer in the source space. '
-        'Note that this also removes packages which are '
-        'skiplisted or which contain `CATKIN_IGNORE` marker files.')
+        help='Remove products from packages are no longer in the source '
+        'space. Note that this also removes packages which are skiplisted '
+        'or which contain `CATKIN_IGNORE` or `CATKIN_IGNORE_ROS2` marker '
+        'files.')
 
     # Advanced group
     advanced_group = parser.add_argument_group(
